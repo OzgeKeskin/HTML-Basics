@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid black;
+        /* border-collapse: collapse;
+         iki kenar oluşumunu önler tek çizgi olarak görünür. */
+      }
+      td,
+      th {
+        padding: 15px;
+        text-align: left;
+      }
+      table {
+        border-spacing: 5px;
+        /*iki border arasındaki boşluğu ayarlar. */
+      }
+      caption {
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- tr : table row (satır)
+         td : table data (sütun)
+         th : table header (başlık)
+         rowspan : 3 satırlık yer kaplar
+         colspan : 3 sütunluk yer kaplar-->
+
+    <table style="width: 100%">
+      <caption>
+        Öğrenci tablosu
+      </caption>
+      <!-- tablonun adıdır.-->
+      <tr>
+        <th rowspan="3">informations</th>
+        <th>name</th>
+        <th>surname</th>
+        <th>age</th>
+        <th colspan="2">adress</th>
+        <th>profile picture</th>
+      </tr>
+      <tr>
+        <td>özge</td>
+        <td>keskin</td>
+        <td>23</td>
+        <td>İzmir</td>
+        <td>Denizli</td>
+        <td>
+          <img
+            src="https://media.licdn.com/dms/image/D4D03AQFbM3zrpqgZGA/profile-displayphoto-shrink_800_800/0/1674597050681?e=1688601600&v=beta&t=BXg2YIohjQNyAJP6nu7nKIdqBN0vuDtc60WxaUWzDTE"
+            alt="ozge keskin linkedin"
+            width="100px"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>recep</td>
+        <td>aydogan</td>
+        <td>22</td>
+        <td>Manisa</td>
+        <td>Denizli</td>
+        <td>
+          <img
+            src="https://media.licdn.com/dms/image/D4D03AQFYjduoq66NAA/profile-displayphoto-shrink_800_800/0/1671281909091?e=1688601600&v=beta&t=f4L5C8xtsFLAa6APLesOMWPtFNMUctV8IoD-AzuevL8"
+            alt="recep aydogan linkedin"
+            width="100px"
+          />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

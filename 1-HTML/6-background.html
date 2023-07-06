@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /*  background-image: url(http://bigpointhotel.com/wp-content/uploads/2018/06/biga-bigpointhotel-arkaplan.jpg); */
+        background-color: pink;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*resim tüm alana yayılmaya çalışır. */
+        background-attachment: fixed;
+        /*hiçbir boşluk kalmadan resim tüm sayfayı kaplar */
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam veniam
+      officiis similique asperiores, saepe dolores.
+    </p>
+    <picture>
+      <source
+        media="(min-width:850px)"
+        srcset="
+          https://img.zet.com/products/36907/348006_36907_1471018389_1000.jpg
+        "
+      />
+      <source
+        media="(min-width:650px)"
+        srcset="
+          https://www.klasiksanatlar.com/img/sayfalar/b/1_1598452306_resim.png
+        "
+      />
+      <img
+        src="https://i.pinimg.com/564x/ac/58/7f/ac587fc0c34d0f7f7d6abd9d39a37b03.jpg"
+        alt="Flowers"
+        style="width: auto"
+      />
+      <!-- img de tanımlamamızın sebebi en kötü durumda en azından imgdeki resmin çalışmasını sağlamaktır.-->
+    </picture>
+  </body>
+</html>

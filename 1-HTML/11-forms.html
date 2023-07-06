@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+  </head>
+  <body>
+    <form action="degerlerial.html" method="get">
+      <label for="ad">adinizi girin :</label>
+      <input type="text" id="ad" name="ad" />
+      <br />
+      <br />
+      <label for="soyad">Soyadinizi girin :</label>
+      <input type="text" id="soyad" name="soyad" />
+      <br />
+      <br />
+      <input type="radio" id="kadin" name="cinsiyet" value="kadin" />
+      <label for="kadin">Kadin</label>
+      <input type="radio" id="erkek" name="cinsiyet" value="erkek" />
+      <label for="erkek">Erkek</label>
+      <!-- name özelliği form gönderildikten sonra form verilerine başvurmak veya js ile forma ulaşmak için kullanılır.-->
+      <!-- name:cinsiyet koymamızın sebebi sadece birini seçebilmek. value koymamızın sebebi ise ilerde o değere tıklandığında veri olarak seçili değeri göndermesi. örneğin kadın'a tıkladığımızda kadın değerinin seçildiği bildirilir. ve bu veriyi yollarken de name alanını kullanır bu nedenle name belirlemek de önemlidir. -->
+      <br />
+      <br />
+      <input type="checkbox" id="mavi" value="mavi" name="chbmavi" />
+      <label for="mavi">Pembe</label>
+      <input type="checkbox" id="yesil" value="yesil" name="chbyesil" />
+      <label for="yesil">yesil</label>
+      <input type="checkbox" id="sari" value="sari" name="chbsari" />
+      <label for="sari">sari</label>
+      <!-- örneğin siyah rengin default olarak seçili olmasını istiyorsak : checked:checked yaparız.-->
+
+      <input
+        type="checkbox"
+        id="siyah"
+        value="siyah"
+        name="chbsiyah"
+        checked="checked"
+      />
+      <label for="siyah">siyah</label>
+      <br />
+      <br />
+      <!-- son olarak buton ekleyelim.-->
+      <input type="submit" value="gonder" />
+      <input type="reset" value="formu sil" />
+      <input
+        type="button"
+        onclick="alert('merhaba')"
+        value="normal bir buton"
+      />
+      <br />
+      <br />
+      <label for="arabalar">Favori arabanızı seçiniz</label>
+      <select name="arabalar" id="arabalar">
+        <option value="honda">honda</option>
+        <option value="reno">reno</option>
+        <option value="mercedes">mercedes</option>
+        <option value="bmw">bmw</option>
+        <option value="peugeot">peugeot</option>
+        <!-- kullanıcının gördüğü değerler beyaz kısımlardır. Value kısmı ise bu değerler seçili olduğunda (submit olduğunda) karşıya gidecek değerlerdir. Yani birisi bmw seçtiğinde karşıya da bmw seçtiği bilgisi gider.-->
+      </select>
+      <br /><br />
+      <!-- textarea ise tek satırlık değil de adres gibi birden fazla satıra sahip alanlar için kullanılan yapıdır.-->
+      <label for="adres">Adres : </label>
+      <textarea name="adres" id="adres" cols="50" rows="2"></textarea>
+      <br /><br />
+      <label for="bio">biyografi : </label>
+      <textarea
+        name="bio"
+        id="bio"
+        style="width: 200px; height: 50px"
+      ></textarea>
+
+      <!-- yukarıdaki input ile oluşturduğumuz buton empty bir elementtir yani içine resim vs. koyamayız. Bu şekilde oluşturduğumuz butona ise koyabiliriz.-->
+      <button type="button" onclick="alert('selam')">
+        <img
+          src="images/Ice-Age-Sid-PNG-Clipart-Background.png"
+          alt="sid"
+          style="width: 50px; height: 50px"
+        />
+        <!-- type kısmını submit yaparsak da varolan formun gönderilme işlemini yaparız.-->
+      </button>
+    </form>
+  </body>
+</html>

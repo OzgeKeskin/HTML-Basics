@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- kodumuzu karmaşadan kurtarmak için fieldsetler kullanabiliriz. örneğin ad soyad kısmına kişisel bilgileri gireceğiz. bunu bir fieldset içine alabiliriz. legend etiketi ile de bu yapının neyle ilgili olduğunu belirtiriz.-->
+    <form action="degerlerial.html" method="get">
+      <fieldset>
+        <legend>kişisel bilgiler</legend>
+        <label for="ad">Adinizi girin :</label>
+        <input type="text" id="ad" name="ad" />
+        <label for="soyad">Soyadinizi girin :</label>
+        <input type="text" id="soyad" name="soyad" />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>Secim bilgileri</legend>
+        <label for="cinsiyet">Cinsiyetinizi secin</label>
+        <br />
+        <input type="radio" name="cinsiyet" value="erkek" id="erkek" />
+        <label for="erkek">Erkek</label>
+        <input type="radio" name="cinsiyet" value="kadin" id="kadin" />
+        <label for="kadin">Kadın</label>
+        <br /><br />
+
+        <label for="renk">Bir renk seciniz :</label>
+        <br />
+        <input type="checkbox" name="chbmavi" id="mavi" value="mavi" />
+        <label for="mavi">Mavi</label>
+        <input type="checkbox" name="chbsari" id="sari" value="sari" />
+        <label for="sari">Sarı</label>
+        <input type="checkbox" id="siyah" name="chbsiyah" value="siyah" />
+        <label for="siyah">Siyah</label>
+      </fieldset>
+      <br /><br />
+
+      <!-- datalist kullanımı ise şu şekildedir. -->
+
+      <label for="il">Sehirinizi seciniz</label>
+      <input list="sehirler" id="il" name="il" />
+      <datalist id="sehirler">
+        <!-- arada bağlantı kurmak için datalist idsini sehirler yaparız.-->
+        <option value="adana">Adana sehiri</option>
+        <option value="izmir">İzmir</option>
+        <option value="manisa"></option>
+        <option value="ankara">Ankara</option>
+      </datalist>
+    </form>
+  </body>
+</html>
